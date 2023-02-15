@@ -24,8 +24,10 @@ createOrder($order_request): \Cardix\Model\OrderIdDto
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Bearer
-$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: Bearer
+$config = Cardix\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Cardix\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
 $apiInstance = new Cardix\Api\OrderApi(
@@ -82,8 +84,10 @@ createOrderCheckout($order_id, $order_checkout_request): \Cardix\Model\OrderPaym
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Bearer
-$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: Bearer
+$config = Cardix\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Cardix\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
 $apiInstance = new Cardix\Api\OrderApi(
@@ -142,8 +146,10 @@ getOrder($order_id): \Cardix\Model\OrderDto
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Bearer
-$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: Bearer
+$config = Cardix\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Cardix\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
 $apiInstance = new Cardix\Api\OrderApi(

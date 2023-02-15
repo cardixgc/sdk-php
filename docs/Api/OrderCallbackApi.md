@@ -22,8 +22,10 @@ retryOrderCallback($order_id, $order_callback_id)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Bearer
-$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure API key authorization: Bearer
+$config = Cardix\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Cardix\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
 $apiInstance = new Cardix\Api\OrderCallbackApi(
