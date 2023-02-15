@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrderApi
+# Cardix\OrderApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createOrder()`
 
 ```php
-createOrder($order_request): \OpenAPI\Client\Model\OrderIdDto
+createOrder($order_request): \Cardix\Model\OrderIdDto
 ```
 
 
@@ -25,16 +25,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Cardix\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$order_request = new \OpenAPI\Client\Model\OrderRequest(); // \OpenAPI\Client\Model\OrderRequest
+$order_request = new \Cardix\Model\OrderRequest(); // \Cardix\Model\OrderRequest
 
 try {
     $result = $apiInstance->createOrder($order_request);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **order_request** | [**\OpenAPI\Client\Model\OrderRequest**](../Model/OrderRequest.md)|  | |
+| **order_request** | [**\Cardix\Model\OrderRequest**](../Model/OrderRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderIdDto**](../Model/OrderIdDto.md)
+[**\Cardix\Model\OrderIdDto**](../Model/OrderIdDto.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ try {
 ## `createOrderCheckout()`
 
 ```php
-createOrderCheckout($order_id, $order_checkout_request): \OpenAPI\Client\Model\OrderPaymentDto
+createOrderCheckout($order_id, $order_checkout_request): \Cardix\Model\OrderPaymentDto
 ```
 
 
@@ -83,17 +83,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Cardix\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $order_id = 'order_id_example'; // string
-$order_checkout_request = new \OpenAPI\Client\Model\OrderCheckoutRequest(); // \OpenAPI\Client\Model\OrderCheckoutRequest
+$order_checkout_request = new \Cardix\Model\OrderCheckoutRequest(); // \Cardix\Model\OrderCheckoutRequest
 
 try {
     $result = $apiInstance->createOrderCheckout($order_id, $order_checkout_request);
@@ -108,11 +108,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **order_id** | **string**|  | |
-| **order_checkout_request** | [**\OpenAPI\Client\Model\OrderCheckoutRequest**](../Model/OrderCheckoutRequest.md)|  | |
+| **order_checkout_request** | [**\Cardix\Model\OrderCheckoutRequest**](../Model/OrderCheckoutRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderPaymentDto**](../Model/OrderPaymentDto.md)
+[**\Cardix\Model\OrderPaymentDto**](../Model/OrderPaymentDto.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ try {
 ## `getOrder()`
 
 ```php
-getOrder($order_id): \OpenAPI\Client\Model\OrderDto
+getOrder($order_id): \Cardix\Model\OrderDto
 ```
 
 
@@ -143,10 +143,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Cardix\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderDto**](../Model/OrderDto.md)
+[**\Cardix\Model\OrderDto**](../Model/OrderDto.md)
 
 ### Authorization
 

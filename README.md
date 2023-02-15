@@ -50,16 +50,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Cardix\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$order_request = new \OpenAPI\Client\Model\OrderRequest(); // \OpenAPI\Client\Model\OrderRequest
+$order_request = new \Cardix\Model\OrderRequest(); // \Cardix\Model\OrderRequest
 
 try {
     $result = $apiInstance->createOrder($order_request);

@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrderPaymentApi
+# Cardix\OrderPaymentApi
 
 All URIs are relative to http://localhost, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `findPayments()`
 
 ```php
-findPayments($order_id): \OpenAPI\Client\Model\OrderPaymentDto[]
+findPayments($order_id): \Cardix\Model\OrderPaymentDto[]
 ```
 
 
@@ -24,10 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderPaymentApi(
+$apiInstance = new Cardix\Api\OrderPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderPaymentDto[]**](../Model/OrderPaymentDto.md)
+[**\Cardix\Model\OrderPaymentDto[]**](../Model/OrderPaymentDto.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ try {
 ## `getPayment()`
 
 ```php
-getPayment($order_id, $order_payment_id): \OpenAPI\Client\Model\OrderPaymentDto
+getPayment($order_id, $order_payment_id): \Cardix\Model\OrderPaymentDto
 ```
 
 
@@ -82,10 +82,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Cardix\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderPaymentApi(
+$apiInstance = new Cardix\Api\OrderPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderPaymentDto**](../Model/OrderPaymentDto.md)
+[**\Cardix\Model\OrderPaymentDto**](../Model/OrderPaymentDto.md)
 
 ### Authorization
 

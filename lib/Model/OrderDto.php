@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cardix
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cardix\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cardix\ObjectSerializer;
 
 /**
  * OrderDto Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cardix
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class OrderDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'total_discount' => 'float',
         'total_payable' => 'float',
         'is_closed' => 'bool',
-        'items' => '\OpenAPI\Client\Model\OrderItemDto[]'
+        'items' => '\Cardix\Model\OrderItemDto[]'
     ];
 
     /**
@@ -565,7 +565,7 @@ class OrderDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\OrderItemDto[]|null
+     * @return \Cardix\Model\OrderItemDto[]|null
      */
     public function getItems()
     {
@@ -575,7 +575,7 @@ class OrderDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\OrderItemDto[]|null $items items
+     * @param \Cardix\Model\OrderItemDto[]|null $items items
      *
      * @return self
      */

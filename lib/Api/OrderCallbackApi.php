@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cardix
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Cardix\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Cardix\ApiException;
+use Cardix\Configuration;
+use Cardix\HeaderSelector;
+use Cardix\ObjectSerializer;
 
 /**
  * OrderCallbackApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cardix
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -129,7 +129,7 @@ class OrderCallbackApi
      * @param  string $order_callback_id order_callback_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryOrderCallback'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -145,7 +145,7 @@ class OrderCallbackApi
      * @param  string $order_callback_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryOrderCallback'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cardix
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Cardix\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Cardix\ApiException;
+use Cardix\Configuration;
+use Cardix\HeaderSelector;
+use Cardix\ObjectSerializer;
 
 /**
  * OrderApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cardix
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class OrderApi
     /**
      * Operation createOrder
      *
-     * @param  \OpenAPI\Client\Model\OrderRequest $order_request order_request (required)
+     * @param  \Cardix\Model\OrderRequest $order_request order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderIdDto
+     * @return \Cardix\Model\OrderIdDto
      */
     public function createOrder($order_request, string $contentType = self::contentTypes['createOrder'][0])
     {
@@ -147,12 +147,12 @@ class OrderApi
     /**
      * Operation createOrderWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\OrderRequest $order_request (required)
+     * @param  \Cardix\Model\OrderRequest $order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderIdDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cardix\Model\OrderIdDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrderWithHttpInfo($order_request, string $contentType = self::contentTypes['createOrder'][0])
     {
@@ -195,23 +195,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\OrderIdDto' === '\SplFileObject') {
+                    if ('\Cardix\Model\OrderIdDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderIdDto' !== 'string') {
+                        if ('\Cardix\Model\OrderIdDto' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderIdDto', []),
+                        ObjectSerializer::deserialize($content, '\Cardix\Model\OrderIdDto', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderIdDto';
+            $returnType = '\Cardix\Model\OrderIdDto';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -232,7 +232,7 @@ class OrderApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderIdDto',
+                        '\Cardix\Model\OrderIdDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -245,7 +245,7 @@ class OrderApi
     /**
      * Operation createOrderAsync
      *
-     * @param  \OpenAPI\Client\Model\OrderRequest $order_request (required)
+     * @param  \Cardix\Model\OrderRequest $order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -264,7 +264,7 @@ class OrderApi
     /**
      * Operation createOrderAsyncWithHttpInfo
      *
-     * @param  \OpenAPI\Client\Model\OrderRequest $order_request (required)
+     * @param  \Cardix\Model\OrderRequest $order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -272,7 +272,7 @@ class OrderApi
      */
     public function createOrderAsyncWithHttpInfo($order_request, string $contentType = self::contentTypes['createOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderIdDto';
+        $returnType = '\Cardix\Model\OrderIdDto';
         $request = $this->createOrderRequest($order_request, $contentType);
 
         return $this->client
@@ -314,7 +314,7 @@ class OrderApi
     /**
      * Create request for operation 'createOrder'
      *
-     * @param  \OpenAPI\Client\Model\OrderRequest $order_request (required)
+     * @param  \Cardix\Model\OrderRequest $order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -410,12 +410,12 @@ class OrderApi
      * Operation createOrderCheckout
      *
      * @param  string $order_id order_id (required)
-     * @param  \OpenAPI\Client\Model\OrderCheckoutRequest $order_checkout_request order_checkout_request (required)
+     * @param  \Cardix\Model\OrderCheckoutRequest $order_checkout_request order_checkout_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCheckout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderPaymentDto
+     * @return \Cardix\Model\OrderPaymentDto
      */
     public function createOrderCheckout($order_id, $order_checkout_request, string $contentType = self::contentTypes['createOrderCheckout'][0])
     {
@@ -427,12 +427,12 @@ class OrderApi
      * Operation createOrderCheckoutWithHttpInfo
      *
      * @param  string $order_id (required)
-     * @param  \OpenAPI\Client\Model\OrderCheckoutRequest $order_checkout_request (required)
+     * @param  \Cardix\Model\OrderCheckoutRequest $order_checkout_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCheckout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderPaymentDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cardix\Model\OrderPaymentDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrderCheckoutWithHttpInfo($order_id, $order_checkout_request, string $contentType = self::contentTypes['createOrderCheckout'][0])
     {
@@ -475,23 +475,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\OrderPaymentDto' === '\SplFileObject') {
+                    if ('\Cardix\Model\OrderPaymentDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderPaymentDto' !== 'string') {
+                        if ('\Cardix\Model\OrderPaymentDto' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderPaymentDto', []),
+                        ObjectSerializer::deserialize($content, '\Cardix\Model\OrderPaymentDto', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderPaymentDto';
+            $returnType = '\Cardix\Model\OrderPaymentDto';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -512,7 +512,7 @@ class OrderApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderPaymentDto',
+                        '\Cardix\Model\OrderPaymentDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -526,7 +526,7 @@ class OrderApi
      * Operation createOrderCheckoutAsync
      *
      * @param  string $order_id (required)
-     * @param  \OpenAPI\Client\Model\OrderCheckoutRequest $order_checkout_request (required)
+     * @param  \Cardix\Model\OrderCheckoutRequest $order_checkout_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCheckout'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -546,7 +546,7 @@ class OrderApi
      * Operation createOrderCheckoutAsyncWithHttpInfo
      *
      * @param  string $order_id (required)
-     * @param  \OpenAPI\Client\Model\OrderCheckoutRequest $order_checkout_request (required)
+     * @param  \Cardix\Model\OrderCheckoutRequest $order_checkout_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCheckout'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -554,7 +554,7 @@ class OrderApi
      */
     public function createOrderCheckoutAsyncWithHttpInfo($order_id, $order_checkout_request, string $contentType = self::contentTypes['createOrderCheckout'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderPaymentDto';
+        $returnType = '\Cardix\Model\OrderPaymentDto';
         $request = $this->createOrderCheckoutRequest($order_id, $order_checkout_request, $contentType);
 
         return $this->client
@@ -597,7 +597,7 @@ class OrderApi
      * Create request for operation 'createOrderCheckout'
      *
      * @param  string $order_id (required)
-     * @param  \OpenAPI\Client\Model\OrderCheckoutRequest $order_checkout_request (required)
+     * @param  \Cardix\Model\OrderCheckoutRequest $order_checkout_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrderCheckout'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -710,9 +710,9 @@ class OrderApi
      * @param  string $order_id order_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderDto
+     * @return \Cardix\Model\OrderDto
      */
     public function getOrder($order_id, string $contentType = self::contentTypes['getOrder'][0])
     {
@@ -726,9 +726,9 @@ class OrderApi
      * @param  string $order_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cardix\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cardix\Model\OrderDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderWithHttpInfo($order_id, string $contentType = self::contentTypes['getOrder'][0])
     {
@@ -771,23 +771,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderDto' === '\SplFileObject') {
+                    if ('\Cardix\Model\OrderDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderDto' !== 'string') {
+                        if ('\Cardix\Model\OrderDto' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderDto', []),
+                        ObjectSerializer::deserialize($content, '\Cardix\Model\OrderDto', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderDto';
+            $returnType = '\Cardix\Model\OrderDto';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -808,7 +808,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderDto',
+                        '\Cardix\Model\OrderDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -848,7 +848,7 @@ class OrderApi
      */
     public function getOrderAsyncWithHttpInfo($order_id, string $contentType = self::contentTypes['getOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderDto';
+        $returnType = '\Cardix\Model\OrderDto';
         $request = $this->getOrderRequest($order_id, $contentType);
 
         return $this->client

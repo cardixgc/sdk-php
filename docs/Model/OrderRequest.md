@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**\OpenAPI\Client\Model\OrderItemRequest[]**](OrderItemRequest.md) |  |
+**items** | [**\Cardix\Model\OrderItemRequest[]**](OrderItemRequest.md) |  |
 **success_redirect_url** | **string** |  | [optional]
 **failure_redirect_url** | **string** |  | [optional]
 **success_callback_url** | **string** |  | [optional]
