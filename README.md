@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *OrderCallbackApi* | [**retryOrderCallback**](docs/Api/OrderCallbackApi.md#retryordercallback) | **PUT** /orders/{orderId}/callbacks/{orderCallbackId}/retries | 
 *OrderPaymentApi* | [**findPayments**](docs/Api/OrderPaymentApi.md#findpayments) | **GET** /orders/{orderId}/payments | 
 *OrderPaymentApi* | [**getPayment**](docs/Api/OrderPaymentApi.md#getpayment) | **GET** /orders/{orderId}/payments/{orderPaymentId} | 
+*OrderPaymentApi* | [**refundPayment**](docs/Api/OrderPaymentApi.md#refundpayment) | **DELETE** /orders/{orderId}/payments/{orderPaymentId} | 
 
 ## Models
 
